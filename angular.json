@@ -24,9 +24,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/style.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery-2.1.4.min.js",
+              "src/assets/js/skycons.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -119,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "whetherapp"
+    }
+  },
+  "defaultProject": "whetherapp",
+  "cli": {
+    "analytics": false
+  }
 }

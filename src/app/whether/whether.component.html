@@ -1,0 +1,80 @@
+<div class="w3ls-weather">
+    <h1>Weather Report</h1>
+    <div class="w3ls-weather-agileinfo"> 
+      <div class="weather-left">
+        <div class="weather-left-text">
+          <h4>{{whetherData.location.name}}, {{whetherData.location.country}}</h4>
+          <h5>{{whetherData.current.localtime}}</h5>
+        </div>
+        <ul class="report">
+          <li><a href="#">{{whetherData.current.humidity}} °C</a></li>
+          <li><a href="#"><span>79</span> °F</a></li>
+        </ul>
+      </div>
+      <div class="weather-right">
+        <ul>
+          <li>
+            <figure class="icons">
+              <canvas id="partly-cloudy-day" width="60" height="60"></canvas>
+              <img src="{{whetherData.current.weather_icons[0]}}" height="60" width="60"/>
+            </figure>
+            <h3>{{whetherData.current.humidity}} °C</h3>
+            <div class="clear"></div>
+          </li>
+          <li>
+            <figure class="icons">
+              <canvas id="clear-day" width="40" height="40"></canvas>
+            </figure>
+            <div class="weather-text">
+              <h4>WED</h4>
+              <h5>27 °C</h5>
+            </div>
+            <div class="clear"></div>
+          </li>
+          <li>
+            <figure class="icons">
+              <canvas id="snow" width="40" height="40"></canvas>
+            </figure>
+            <div class="weather-text">
+              <h4>THR</h4>
+              <h5>13 °C</h5>
+            </div>
+            <div class="clear"></div>
+          </li>
+          <li>
+            <figure class="icons">
+              <canvas id="partly-cloudy-night" width="40" height="40"></canvas>
+            </figure>
+            <div class="weather-text">
+              <h4>FRI</h4>
+              <h5>18 °C</h5>
+            </div>
+            <div class="clear"></div>
+          </li>
+        </ul>
+        <script>
+           var icons = new Skycons({"color": "#fff"}),
+              list  = [
+              "partly-cloudy-day"
+              ],
+              i;
+  
+            for(i = list.length; i--; )
+            icons.set(list[i], list[i]);
+            icons.play();
+        </script>
+        <script>
+           var icons = new Skycons({"color": "#fff"}),
+              list  = [
+              "clear-night","partly-cloudy-night", "cloudy", "clear-day", "sleet", "snow", "wind","fog"
+              ],
+              i;
+  
+            for(i = list.length; i--; )
+            icons.set(list[i], list[i]);
+            icons.play();
+        </script>
+      </div>
+      <div class="clear"></div>
+    </div>  
+  </div>	
